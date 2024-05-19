@@ -24,6 +24,9 @@ const createUser = async (req, res) => {
             })
         }
         const response = await UserService.createUser(req.body)
+        // if (req.body.isAdmin) {
+        //     response.data.isAdmin = true;
+        // }
         // if (req.body.isSeller) {
         //     response.data.isSeller = true;
         // }
