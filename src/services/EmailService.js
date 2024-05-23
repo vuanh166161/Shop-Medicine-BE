@@ -26,7 +26,7 @@ const sendEmailOrder = async (email, orderItems) => {
         // send mail with defined transport object
         let info = await transporter.sendMail({
           from: process.env.MAIL_ACCOUNT, // sender address
-          to: "anhnvgcc200163@fpt.edu.vn", // list of receivers
+          to: "vuanh166161@gmail.com", // list of receivers
           subject: "Order Confirmation", // Subject line
           text: `Hello,\n\nThank you for ordering from our website. Your order has been confirmed and is being processed. Please check the details of your order below:\n\n${listOrder}\nWe will notify you once your order is shipped. If you have any questions, please feel free to contact us.\n\nBest regards,\nCustomer Support Team.`, // plain text body
     html: `<p>Hello,</p><p>Thank you for ordering from our website. Your order has been confirmed and is being processed.</p><p>Please check the details of your order below:</p><ul>${listOrder}</ul><p>We will notify you once your order is shipped. If you have any questions, please feel free to contact us.</p><p>Best regards,<br>Customer Support Team.</p>`, // html body
